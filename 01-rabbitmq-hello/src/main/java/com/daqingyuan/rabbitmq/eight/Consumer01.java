@@ -43,7 +43,7 @@ public class Consumer01 {
         //设置队列最大长度
         //params.put("x-max-length", 6);
 
-        //正常队列绑定死信队列信息
+        //正常队列绑定
         channel.queueDeclare(NORMAL_QUEUE, false, false, false, params);
         channel.queueBind(NORMAL_QUEUE, NORMAL_EXCHANGE, "zhangsan");
         System.out.println("等待接收消息.....");
